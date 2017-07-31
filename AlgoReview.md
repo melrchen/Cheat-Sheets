@@ -1,32 +1,32 @@
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 
 ## Algorithm Complexity
 
 * Divid, conquer, and combine
-* Master Theorem: $T(n)=2T(n/2)+n$
-* Sterling's Approximation: $n! = \sqrt{ 2 \pi n} (\frac{n}{e})^n$
+* Master Theorem: `T(n)=2T(n/2)+n`
+* Sterling's Approximation: `n! = \sqrt{ 2 \pi n} (\frac{n}{e})^n`
+
+## Python Cost Models
+
+| Operation       | List/array  | Dict/Hash Table  |
+| --------------- |:-----------:| ----------------:|
+| Append          | O(1)        | O(1)             |
+| Search          | O(n)        | O(1)             |
+| Remove          | O(n)        | O(1)             |
+| Order preserved | Yes         | No               |
 
 # Sorting 
 
+* Comparison sort = decision tree with n! leaves
 
+
+| Comparison? | Sort      | Time                   |  In Place  |  Stable  |
+| ----------- |:---------:| :---------------------:| :--------: | -------: |
+| Yes         | Insertion | \Theta(n+d) or O(n^2)  |  yes       |  yes     |
+| Yes         | Merge     | \Theta(nlogn)          |  yes       |  yes     |
+| Yes         | Heap      | \Theta(nlogn)          |  yes       |  no      |
+| Yes         | AVL       | \Theta(nlogn)          |  no        |  yes     |
+| No          | Counting  | \Theta(n+k)            |  no        |  yes     |
+| No          | Radix     | \Theta((n+b)log_b(k)   |  no        |  yes     |
 
 # Hashtables
 
